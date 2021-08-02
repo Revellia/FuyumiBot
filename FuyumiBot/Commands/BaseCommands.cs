@@ -23,7 +23,7 @@ namespace FuyumiBot.Commands
         [Description("Says hello to Fuyumi!")]
         public async Task Hello(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync($"Hello {ctx.Member.Mention} I am Fuyumi! I was made by Revellia to help with many things!")
+            await ctx.Channel.SendMessageAsync($"Hello {ctx.Member.Mention} I am Fuyumi! I was made by Revellia to help with many things! Try ?help for more")
                 .ConfigureAwait(false);
         }
 
@@ -31,7 +31,7 @@ namespace FuyumiBot.Commands
         [Description("Gives info on Fuyumi")]
         public async Task Info(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync("If you want info on me find my source code and more at https://github.com/Revellia/FuyumiBot")
+            await ctx.Member.SendMessageAsync("If you want info on me find my source code and more at https://github.com/Revellia/FuyumiBot")
                 .ConfigureAwait(false);
         }
 
