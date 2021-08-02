@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FuyumiBot.Commands
 {
-    public class FunCommands : BaseCommandModule
+    public class BaseCommands : BaseCommandModule
     {
 
         [Command("Ping")]

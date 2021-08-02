@@ -50,7 +50,7 @@ namespace FuyumiBot
 
             Commands = Client.UseCommandsNext(commandsConfig);
 
-            Commands.RegisterCommands<FunCommands>();
+            Commands.RegisterCommands<BaseCommands>();
             Commands.RegisterCommands<ModerationCommands>();
 
             await Client.ConnectAsync();
