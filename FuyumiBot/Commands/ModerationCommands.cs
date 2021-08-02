@@ -28,7 +28,7 @@ namespace FuyumiBot.Commands
                     .ConfigureAwait(false);
             } else
             {
-                await ctx.Member.SendMessageAsync("Command \"Warn\" typed incorrectly, make sure you are mentioning the user you are trying to warn")
+                await ctx.Member.SendMessageAsync("Command typed incorrectly, make sure you are mentioning the user you are trying to warn")
                     .ConfigureAwait(false);
             }
         }
