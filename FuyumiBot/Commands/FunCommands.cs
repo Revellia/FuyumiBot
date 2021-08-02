@@ -23,7 +23,7 @@ namespace FuyumiBot.Commands
         [Description("Says hello to Fuyumi!")]
         public async Task Hello(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync("Hello I am Fuyumi! I was made by Revellia to help with many things!")
+            await ctx.Channel.SendMessageAsync($"Hello {ctx.Member.Mention} I am Fuyumi! I was made by Revellia to help with many things!")
                 .ConfigureAwait(false);
         }
 
@@ -43,6 +43,17 @@ namespace FuyumiBot.Commands
         {
             await ctx.Channel.SendMessageAsync((numberOne + numberTwo)
                 .ToString())
+                .ConfigureAwait(false);
+        }
+ 
+        [Command("Warn")]
+        [Description("Warns the user")]
+        [RequireRoles(RoleCheckMode.Any, "Fuyumi's Creator", "Owner", "Moderator", "Administrator")]
+        public async Task Warn(CommandContext ctx,
+            [Description("Message to warn with (Cover in quotations)")] string WarningMessage,
+            [Description("User to warn (@ the user)")] string WarnUser)
+        {
+            await ctx.Channel.SendMessageAsync($"{WarnUser} has been warned by a staff member | {WarningMessage} ")
                 .ConfigureAwait(false);
         }
     }
