@@ -1,7 +1,7 @@
 # FuyumiBot
 Fuyumi's Discord Bot Coding
 
--------------- Made By Revellia | Base code from Dapper Dino ----------------
+               Made By Revellia | Base code from Dapper Dino
 
 * Just some simple code for my discord bot*
 
