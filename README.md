@@ -8,7 +8,7 @@ Made By Revellia | Base code from Dapper Dino
 
 * I'm new at coding and this is my first project
 
-* Plus, this is my first git project aswell.
+* This is my first experience with github aswell
 
 Rules
 -----------------------------------------------------------------------------
