@@ -17,8 +17,15 @@ namespace FuyumiBot.Commands
     [Description("Message to warn with (Cover in quotations)")] string WarningMessage,
     [Description("User to warn (@ the user)")] string WarnUser)
         {
-            await ctx.Channel.SendMessageAsync($"{WarnUser} has been warned by a staff member | {WarningMessage} ")
-                .ConfigureAwait(false);
+            if (WarningMessage.Contains("@")){
+
+                await ctx.Member.SendMessageAsync("Command typed incorrectly, check ?help warn")
+                    .ConfigureAwait(false);
+            } else
+            {
+                await ctx.Channel.SendMessageAsync($"{WarnUser} has been warned by a staff member | {WarningMessage} ")
+                    .ConfigureAwait(false);
+            }
         }
     }
 }
