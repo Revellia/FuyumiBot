@@ -20,5 +20,10 @@ namespace FuyumiBot.Commands
         {
             await ctx.Channel.SendMessageAsync("Hello I am Fuyumi! I was made by Revellia to help with many things!").ConfigureAwait(false);
         }
+        [Command("Info")]
+        public async Task Info(CommandContext ctx)
+        {
+            await ctx.Channel.SendMessageAsync("If you want info on me find my source code and more at https://github.com/Revellia/FuyumiBot").ConfigureAwait(false);
+        }
     }
 }
